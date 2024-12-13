@@ -16,6 +16,7 @@
     "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
+    "src": "^1.1.2",
     "sty": "^0.6.1"
   }
 }
