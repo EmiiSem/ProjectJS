@@ -33,7 +33,6 @@ function image(block) {
     `
 }
 
-// export { title, text_text, description, image }
 export const templates = {
     title,
     text_text,
