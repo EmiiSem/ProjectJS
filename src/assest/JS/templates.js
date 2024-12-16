@@ -1,25 +1,29 @@
-import {row, col} from '../../utilites'
+import {row, col, css} from '../../utilites'
 
 function title(block) {
-    return row(col(`<h1>${block.value}</h1>`))
+    const {tag = 'h1', styles} = block.option
+    return row(col(`<${tag}>${block.value}</${tag}>`), css(styles))
 }
 
-function text_text(block) {
-    return row(col(`<p>${block.value}</p>`))
+function text(block) {
+    const {paragrahe = 'p', styles} = block.option
+    return row(col(`<${paragrahe}>${block.value}</${paragrahe}>`), css(styles))
 }
 
 function description(block) {
+    const {paragrahe = 'p', styles} = block.option
     const text = block.value.map(col).join("")
-    return row(`<p>${text}</p>`)
+    return row(`<${paragrahe}>${text}</${paragrahe}>`, css(styles))
 }
 
 function image(block) {
-    return row(`<img src="${block.value}">`)
+    const {img = 'img', styles} = block.option
+    return row(`<${img} src="${block.value}">`, css(styles))
 }
 
 export const templates = {
     title,
-    text_text,
+    text,
     description,
     image
 }
