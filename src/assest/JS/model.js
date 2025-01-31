@@ -1,8 +1,8 @@
 import image from '../images/image.png'
-import { Block } from '../classes/blocks'
+import { TitleBlock, TextBlock, DescriptionBlock, ImageBlock } from '../classes/blocks'
 
 const modelArray = [
-    new Block('title', 'Website builder in pure JavaScript', {
+    new TitleBlock('Website builder in pure JavaScript', {
         tag: 'h2',
         styles: {
             background: 'linear-gradient(to right, #350431, #433240)',
@@ -12,7 +12,7 @@ const modelArray = [
         }
     }),
 
-    new Block('text', 'This site was created for an informative purpose and to create certain functions', {
+    new TextBlock('This site was created for an informative purpose and to create certain functions', {
         styles: {
             'text-align': 'center',
             background: '#000',
@@ -22,7 +22,7 @@ const modelArray = [
         }
     }),
 
-    new Block('description', [
+    new DescriptionBlock([
         'I am a junior+ developer, I have been doing web development for 2-3 years now, but I started my professional career on March 1, 2024',
         'My technology stacks are: HTML, CSS, JavaScript, PHP, and CMS: 1C-Bitrix',
         'The IDEs I use are: Visual Studio Code, PhpStorm, Figma and a bit of PyCharm'
@@ -34,7 +34,7 @@ const modelArray = [
         }
     }),
 
-    new Block('image', image, {
+    new ImageBlock(image, {
         styles: {
             display: 'flex',
             'justify-content': 'center',
