@@ -1,8 +1,5 @@
 import { modelArray } from "./model"
 import "../CSS/style.css"
+import { App } from "../classes/app"
 
-const $sit = document.querySelector('#sit')
-
-modelArray.forEach(block => {
-    $sit.insertAdjacentHTML('beforeend', block.toHTML());
-});
+new App(modelArray).init()
